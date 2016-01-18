@@ -49,3 +49,26 @@
 	position: absolute;
 	top: 65px;
 }
+
+.pencil .shaved-base {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 60px 30px 0 30px;
+	border-color: #e4a85b transparent transparent transparent;
+	position: absolute;
+	top: 400px;
+	left: 285px;
+}
+
+.pencil .shaved-base:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30px 15px 0 15px;
+	border-color: #474c4d transparent transparent transparent;
+	position: absolute;
+	top: -30px;
+	left: -15px;
+}
