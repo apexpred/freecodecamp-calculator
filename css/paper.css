@@ -1,7 +1,17 @@
 .paper {
 	position: absolute;
-	top: 100px;
-	left: 400px;
+	top: 25px;
+	right: 100px;
+	transform: rotate(20deg);
+}
+
+.paper:before {
+	content: "Hello I'm David and this is my Freecodecamp calculator";
+	font-family: "Nothing You Could Do";
+	position: absolute;
+	top: 73px;
+	z-index: 10;
+	right: 2px;
 }
 
 .paper .page {
@@ -49,4 +59,160 @@
 	top: 412px;
 	background-color: #d7aa60;
 	border-radius: 100%
+}
+
+.paper .line1 {
+	position: relative;
+	width: inherit;
+	height: 2px;
+	background-color: #4776f4;
+	top: 40px;
+}
+
+.paper .line1:before {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 30px;
+	background-color: #5c7fde;
+}
+
+.paper .line1:after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 60px;
+	background-color: #5c7fde;
+}
+
+.paper .line2 {
+	position: relative;
+	width: inherit;
+	height: 1px;
+	background-color: #5c7fde;
+	top: 125px;
+}
+
+.paper .line2:before {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 30px;
+	background-color: #5c7fde;
+}
+
+.paper .line2:after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 60px;
+	background-color: #5c7fde;
+}
+
+.paper .line3 {
+	position: relative;
+	width: inherit;
+	height: 1px;
+	background-color: #5c7fde;
+	top: 214px;
+}
+
+.paper .line3:before {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 30px;
+	background-color: #5c7fde;
+}
+
+.paper .line3:after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 60px;
+	background-color: #5c7fde;
+}
+
+.paper .line4 {
+	position: relative;
+	width: inherit;
+	height: 1px;
+	background-color: #5c7fde;
+	top: 273px;
+}
+
+.paper .line4:before {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 30px;
+	background-color: #5c7fde;
+}
+
+.paper .line4:after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 60px;
+	background-color: #5c7fde;
+}
+
+.paper .line5 {
+	position: relative;
+	width: inherit;
+	height: 1px;
+	background-color: #5c7fde;
+	top: 363px;
+}
+
+.paper .line5:before {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 30px;
+	background-color: #5c7fde;
+}
+
+.paper .line5:after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 60px;
+	background-color: #5c7fde;
+}
+
+.paper .line6 {
+	position: relative;
+	width: inherit;
+	height: 1px;
+	background-color: #5c7fde;
+	top: 453px;
+}
+
+.paper .line6:before {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 30px;
+	background-color: #5c7fde;
+}
+
+.paper .line6:after {
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 1px;
+	top: 60px;
+	background-color: #5c7fde;
 }
