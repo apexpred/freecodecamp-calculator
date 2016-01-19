@@ -1,0 +1,52 @@
+.paper {
+	position: absolute;
+	top: 100px;
+	left: 400px;
+}
+
+.paper .page {
+	width: 500px;
+	height: 550px;
+	background: #f5f0e6;
+	background-image: linear-gradient(to bottom, #F2E8D8 35%, #F5F0E6 85%);
+	position: relative;
+}
+
+.paper .page:before {
+	position: absolute;
+	content: "";
+	height: inherit;
+	width: 2px;
+	background-color: red;
+	left: 55px;
+}
+
+.paper .hole {
+	position: relative;
+	width: 17px;
+	height: 17px;
+	border-radius: 100%;
+	background-color: #d7aa60;
+	left: 18px;
+	top: 60px;
+}
+
+.paper .hole:before {
+	content: "";
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	top: 212px;
+	background-color: #d7aa60;
+	border-radius: 100%
+}
+
+.paper .hole:after {
+	content: "";
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	top: 412px;
+	background-color: #d7aa60;
+	border-radius: 100%
+}
