@@ -19,6 +19,15 @@
 	top: -480px;
 	left: 20px;
 	color: white;
+	font-size: 17px;
+	transition: 1s;
+}
+
+.calculator .display div {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .calculator .keypad {
@@ -242,6 +251,7 @@
 .key {
 	color: #474747;
 	transition: 1s;
+	cursor: pointer;
 }
 
 .on {

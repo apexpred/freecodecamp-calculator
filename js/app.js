@@ -14,6 +14,7 @@ $(document).ready(function () {
 		if (!calcOn) {
 			
 			$('.key').addClass('on');
+			$('.display').addClass('on');
 			calcOn = !calcOn;
 
 
@@ -28,12 +29,15 @@ $(document).ready(function () {
 					if (typeof value === 'number') {
 						vals += value;
 						opStr += value;
-						$('.display').html(opStr);
+						$('.display div').html(opStr);
 					}
 					else if (value === 'c') {
-						$('.display').html('');
+						$('.display div').html('');
 						calcEngine.clear();
-						
+						valsArr = [];
+						vals = '';
+						opStr = '';
+
 						console.log(calcEngine.getLeftVal());
 						console.log(calcEngine.getRightVal());
 						console.log(calcEngine.getResult());
@@ -45,7 +49,7 @@ $(document).ready(function () {
 						valsArr.push(value);
 
 						opStr += value;
-						$('.display').html(opStr);
+						$('.display div').html(opStr);
 					}
 					else if (value === '=') {
 						valsArr.push(vals);
@@ -76,7 +80,7 @@ $(document).ready(function () {
 							}
 						});
 
-						$('.display').html(calcEngine.getResult());
+						$('.display div').html(calcEngine.getResult());
 						vals = '';
 						valsArr = [];
 						opStr = '';
@@ -90,9 +94,12 @@ $(document).ready(function () {
 		else {
 			
 			$('.key').removeClass('on');
+			$('.display').removeClass('on');
 			calcOn = !calcOn;
 
 			$('.keypad').off('click', 'div');
+			$('.display div').html('');
+			calcEngine.clear();
 		}
 
 
