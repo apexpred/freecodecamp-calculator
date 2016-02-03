@@ -1,42 +1,50 @@
 var calcEngine = (function () {
 
-	var leftVal,
-		rightVal,
+	var leftVal = 0,
+		rightVal = 0,
 		opCode,
 		result;
 
 	var execute = function () {
 		switch (opCode) {
-			case 'a':
+			case '+':
 				result = leftVal + rightVal;
 				break;
-			case 's':
+			case '-':
 				result = leftVal - rightVal;
 				break;
-			case 'm':
-				result = leftVal * leftVal;
+			case '*':
+				result = leftVal * rightVal;
 				break;
-			case 'd':
+			case '/':
 				result = rightVal !== 0 ? leftVal / rightVal : 0;
 				break;
 		}
 	};
 
-	var setLeftVal = function (x) { return leftVal = x ;};
-	var setRightVal = function (x) { return rightVal = x; };
-	var setOpCode = function (x) { return opCode = x };
-	var getOpCode = function (x) { return opCode; };
-	var getRightVal = function (x) { return rightVal; };
-	var getLeftVal = function (x) { return leftVal; };
-	var getResult = function (x) { return result; };
-
+	var setLeftVal = function (x) { leftVal = x ;};
+	var setRightVal = function (x) { rightVal = x; };
+	var setOpCode = function (x) { opCode = x; };
+	var getOpCode = function () { return opCode; };
+	var getRightVal = function () { return rightVal; };
+	var getLeftVal = function () { return leftVal; };
+	var getResult = function () { return result; };
+	var clear = function () {
+		leftVal = 0;
+		rightVal = 0;
+		opCode = '';
+	};
+ 
 	return {
 		setLeftVal: setLeftVal,
 		setRightVal: setRightVal,
 		setOpCode: setOpCode,
 		setLeftVal: setLeftVal,
-		setRightVal: setRightVal,
-		getResult: getResult
+		getRightVal: getRightVal,
+		getLeftVal: getLeftVal,
+		getOpCode: getOpCode,
+		clear: clear,
+		getResult: getResult,
+		execute: execute
 	};
-
 })();
