@@ -21,12 +21,23 @@ $(document).ready(function () {
 				//console.log($(this).data('val'));
 				var value = $(this).data('val');
 
+
+
 				if (value !== undefined) {
 					
 					if (typeof value === 'number') {
 						vals += value;
 						opStr += value;
 						$('.display').html(opStr);
+					}
+					else if (value === 'c') {
+						$('.display').html('');
+						calcEngine.clear();
+						
+						console.log(calcEngine.getLeftVal());
+						console.log(calcEngine.getRightVal());
+						console.log(calcEngine.getResult());
+						console.log(valsArr);
 					}
 					else if (typeof value === 'string' && value !== '=') {
 						valsArr.push(vals);
@@ -38,7 +49,7 @@ $(document).ready(function () {
 					}
 					else if (value === '=') {
 						valsArr.push(vals);
-						console.log(valsArr);
+						
 
 						valsArr.forEach(function (val, index) {
 							
@@ -66,9 +77,11 @@ $(document).ready(function () {
 						});
 
 						$('.display').html(calcEngine.getResult());
+						vals = '';
+						valsArr = [];
+						opStr = '';
 
 					}
-
 
 				}
 

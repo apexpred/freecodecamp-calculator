@@ -2,8 +2,8 @@ var calcEngine = (function () {
 
 	var leftVal = 0,
 		rightVal = 0,
-		opCode,
-		result;
+		opCode = '',
+		result = 0;
 
 	var execute = function () {
 		switch (opCode) {
@@ -33,6 +33,7 @@ var calcEngine = (function () {
 		leftVal = 0;
 		rightVal = 0;
 		opCode = '';
+		result = 0;
 	};
  
 	return {
